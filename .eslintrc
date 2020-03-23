@@ -28,6 +28,12 @@
     "no-eval": "error",
     "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+    "no-restricted-syntax": ["error",
+      {
+        "selector": "CallExpression[callee.object.name='window'][callee.property.name='getComputedStyle']",
+        "message": "Do not use `getComputedStyle`, import and use the `computedStyle` helper"
+      }
+    ],
     "no-undef": "error",
     "no-unused-expressions": "error",
     "no-unused-vars": "error",
@@ -40,13 +46,7 @@
     "jsdoc/require-hyphen-before-param-description": 1,
     "jsdoc/require-param": 1,
     "jsdoc/require-param-type": 1,
-    "jsdoc/require-returns-type": 1,
-    "no-restricted-syntax": [2,
-      {
-          "selector": "CallExpression[callee.name='getComputedStyle']",
-          "message": "Do not use `getComputedStyle`, import and use the `computedStyle` helper"
-      }
-    ]
+    "jsdoc/require-returns-type": 1
   },
   "settings": {
     "jsdoc": {
